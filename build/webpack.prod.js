@@ -9,12 +9,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = merge(common, {
   mode: 'production',
   entry: { // 类库文件单独打包
-    app: path.join(__dirname, 'src/main.js'),
+    app: path.join(__dirname, '../src/main.js'),
     vendors: ['vue']
   },
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, '../dist')
   },
   module: {
     rules: [

@@ -7,16 +7,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   target: 'web',
   // 入口， __dirname 是当前文件所在目录
-  entry: path.join(__dirname, 'src/main.js'),
+  entry: path.join(__dirname, '../src/main.js'),
   // 出口
   output: {
     filename: 'bundle.[hash:8].js',
-    path: path.join(__dirname, 'dist')
+    path: path.join(__dirname, '../dist')
   },
   resolve: {
     alias: {
-      Utilities: path.resolve(__dirname, 'src/utilities/'),
-      '@': path.resolve(__dirname, 'src')
+      // Utilities: path.resolve(__dirname, 'src/utilities/'),
+      '@': path.resolve(__dirname, '../src')
     }
   },
   module: {
@@ -39,7 +39,7 @@ module.exports = {
             loader: 'url-loader',
             options: {
               limit: 10000,
-              name: '[name]-vc&sisi.[ext]'
+              name: '[name]-vc.[ext]'
             }
           },
           {
