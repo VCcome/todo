@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --config ./build/webpack.prod.js",
-    "dev": "webpack-dev-server --config ./build/webpack.dev.js"
+    "dev": "webpack-dev-server --config ./build/webpack.dev.js",
+    "serve": "cross-env NODE_ENV=development webpack-dev-server --config ./build/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -23,9 +24,9 @@
     "file-loader": "^4.2.0",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.0",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.2.0",
+    "sass-loader": "^8.0.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^2.1.0",
     "vue": "^2.6.10",
